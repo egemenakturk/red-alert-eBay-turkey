@@ -67,6 +67,7 @@ def job_results (job_api_urls):
                 time.sleep(1.1)
             if team_split[0] == teams[1]:
                 #hc_06.write(b'6')
+
                 time.sleep(1.1)
             else:
                 hc_05.write(b'6')
