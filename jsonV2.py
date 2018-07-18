@@ -12,13 +12,13 @@ folder_api_urls = ['https://jenkins2.app.gittigidiyor.net/job/QA/job/E2E-PROD/jo
 job_api_urls = ['https://jenkins2.app.gittigidiyor.net/job/GG/job/GGWEB/job/master/api/json',
                 'https://jenkins2.app.gittigidiyor.net/job/GG/job/ZF/job/master/api/json']
 job_failure = []
-teams = ["bzg", "maste"]
+teams = ["bzg", "master"]
 headers = {'Authorization': 'Basic bXlhbWFuOjQyMThjMDRmNjJjZWFhMzAwYmVlMzg2YjBhZmRjMjZl'}
 
 while True:
     try:
         #hc_07 = serial.Serial('/dev/tty.HC-05-SPPDev', 9600)
-       # hc_06 = serial.Serial('/dev/tty.HC-06-SPPDev', 9600)
+        hc_06 = serial.Serial('/dev/tty.HC-06-SPPDev', 9600)
         hc_05 = serial.Serial('/dev/tty.HC-06-SPPDev-1', 9600)
         break
     except Exception:
@@ -41,7 +41,7 @@ def get_jobs (folder_api_urls, job_api_urls, job_failure):
                     time.sleep(1.1)
                 if team_split[0] == teams[1]:
 
-                   # hc_06.write(b'6')
+                    hc_06.write(b'6')
                     time.sleep(1.1)
                 else:
 
@@ -66,7 +66,7 @@ def job_results (job_api_urls):
                 #hc_07.write(b'6')
                 time.sleep(1.1)
             if team_split[0] == teams[1]:
-                #hc_06.write(b'6')
+                hc_06.write(b'6')
 
                 time.sleep(1.1)
             else:
