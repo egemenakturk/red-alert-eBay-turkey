@@ -12,7 +12,7 @@ folder_api_urls = ['https://jenkins2.app.gittigidiyor.net/job/QA/job/E2E-PROD/jo
 job_api_urls = ['https://jenkins2.app.gittigidiyor.net/job/GG/job/GGWEB/job/master/api/json',
                 'https://jenkins2.app.gittigidiyor.net/job/GG/job/ZF/job/master/api/json']
 job_failure = []
-teams = ["bzg", "master"]
+teams = ["bzg", "maste"]
 headers = {'Authorization': 'Basic bXlhbWFuOjQyMThjMDRmNjJjZWFhMzAwYmVlMzg2YjBhZmRjMjZl'}
 
 while True:
