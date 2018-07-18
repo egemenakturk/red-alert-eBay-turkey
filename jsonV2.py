@@ -18,8 +18,8 @@ headers = {'Authorization': 'Basic bXlhbWFuOjQyMThjMDRmNjJjZWFhMzAwYmVlMzg2YjBhZ
 while True:
     try:
         hc_07 = serial.Serial('/dev/tty.HC-05-SPPDev', 9600)
-        hc_06 = serial.Serial('/dev/tty.HC-06-SPPDev', 9600)
-        hc_05 = serial.Serial('/dev/tty.HC-06-SPPDev-1', 9600)
+       # hc_06 = serial.Serial('/dev/tty.HC-06-SPPDev', 9600)
+       # hc_05 = serial.Serial('/dev/tty.HC-06-SPPDev-1', 9600)
         break
     except Exception:
         print()
@@ -41,11 +41,11 @@ def get_jobs (folder_api_urls, job_api_urls, job_failure):
                     time.sleep(1.1)
                 if team_split[0] == teams[1]:
 
-                    hc_06.write(b'6')
+                   # hc_06.write(b'6')
                     time.sleep(1.1)
                 else:
 
-                    hc_05.write(b'6')
+                    #hc_05.write(b'6')
                     time.sleep(1.1)
     del folder_api_urls[0]
     if len(folder_api_urls) == 0:
@@ -66,10 +66,10 @@ def job_results (job_api_urls):
                 hc_07.write(b'6')
                 time.sleep(1.1)
             if team_split[0] == teams[1]:
-                hc_06.write(b'6')
+                #hc_06.write(b'6')
                 time.sleep(1.1)
             else:
-                hc_05.write(b'6')
+                #hc_05.write(b'6')
                 time.sleep(1.1)
         del job_api_urls[0]
     return
