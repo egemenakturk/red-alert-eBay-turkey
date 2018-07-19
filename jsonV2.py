@@ -52,7 +52,6 @@ def job_results(job_api_urls):
                 time.sleep(1.1)
             if team_split[0] == teams[1]:
                 hc_06.write(b'6')
-
                 time.sleep(1.1)
             else:
                 dota.write(b'6')
@@ -62,8 +61,8 @@ def job_results(job_api_urls):
 
 def send_message(job_failure):
     team_name = job_failure[0]
+    print(team_name)
     team_split = team_name.split("-")
-    print(team_split[0])
     if team_split[0] == teams[0]:
         # hc_07.write(b'6')
         time.sleep(1.1)
@@ -73,7 +72,11 @@ def send_message(job_failure):
     else:
         dota.write(b'6')
         time.sleep(1.1)
-
+    del job_failure[0]
+    if len(job_failure) ==0 :
+        return
+    else:
+        send_message(job_failure)
 
 find_roots(folder_api_urls, job_api_urls, job_failure)
 job_results(job_api_urls)
