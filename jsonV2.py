@@ -15,8 +15,8 @@ headers = {'Authorization': 'Basic bXlhbWFuOjQyMThjMDRmNjJjZWFhMzAwYmVlMzg2YjBhZ
 while True:
     try:
         # hc_07 = serial.Serial('/dev/tty.HC-05-SPPDev', 9600)
-        hc_06 = serial.Serial('/dev/tty.HC-06-SPPDev', 9600)
-        dota = serial.Serial('/dev/tty.HC-06-SPPDev-1', 9600)
+        hc_06 = serial.Serial('/dev/tty.HC-06-SPPDev-1', 9600)
+        dota = serial.Serial('/dev/tty.HC-06-SPPDev', 9600)
         break
     except Exception:
         print()
