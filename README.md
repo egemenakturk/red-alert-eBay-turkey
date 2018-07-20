@@ -5,7 +5,7 @@
 1) Machine ssh-key need to added to git-lab project
 2) Python3 path need to added into .bash_profile
 
-    >'which python3' shows the path of python3
+    > 'which python3' shows the path of python3
     'nano .bash_profile'
     insert export PYTHONPATH="path comes here":$PYTHONPATH
 3) 
