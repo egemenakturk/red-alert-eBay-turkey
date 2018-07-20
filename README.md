@@ -28,4 +28,24 @@
     
 >    to terminal `crontab -e` 
 >    insert `*/5 * * * 1-5 /Users/$USER/red-alert/RedAlert-eBay`
+
+
+### Adding New Device
+
+1) Open bluetooth and connect with new device
+
+2) Go to terminal
+
+>    `ls /dev/tty.*`
+
+Find new device and copy the adress (Example = /dev/tty.HC-06-SPPDev-1 )
+
+3) Go to .py folder and add below `try` in the code as :
+
+>    `new_team_name = serial.Serial('adress_of_device', 9600)`    
+
+
+
+
+
    
