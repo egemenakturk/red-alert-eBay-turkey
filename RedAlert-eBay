@@ -1,4 +1,5 @@
 #!/bin/bash
+cd
 source ~/.bash_profile
 rm -rf /Users/$USER/red-alert
 git clone git@git.app.gittigidiyor.net:qa/red-alert.git
