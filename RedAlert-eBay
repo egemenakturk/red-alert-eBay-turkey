@@ -1,0 +1,5 @@
+#!/bin/bash
+source ~/.bash_profile
+rm -rf /Users/$USER/red-alert
+git clone git@git.app.gittigidiyor.net:qa/red-alert.git
+python3 /Users/$USER/red-alert/jsonV2.py
