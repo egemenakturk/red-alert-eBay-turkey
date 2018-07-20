@@ -81,3 +81,4 @@ def send_message(job_failure):
 find_roots(folder_api_urls, job_api_urls, job_failure)
 job_results(job_api_urls)
 send_message(job_failure)
+print("-----FINISHED-----")
