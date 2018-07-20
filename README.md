@@ -58,6 +58,16 @@ Find new device and copy the adress (Example = /dev/tty.HC-06-SPPDev-1 )
 
 5) Edit `def job_results` and `def send_message` `if` section
 
+6) When uploading arduino code to arduino 
+    
+    1) Tools > Port > Serial port
+    
+    2) Discard bluetooth module from arduino
+    
+    3) Upload
+    
+If some problems occur while uploading code try changing Tools > Processors
+
 
 
    
