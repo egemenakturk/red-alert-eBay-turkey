@@ -23,6 +23,8 @@ while True:
 
 
 
+
+
 def find_roots(folder_api_urls, job_api_urls, job_failure):
     data = requests.get(folder_api_urls[0], headers=headers).json()
     length = len(data["jobs"])
