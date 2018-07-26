@@ -9,14 +9,14 @@ folder_api_urls = ['https://jenkins2.app.gittigidiyor.net/job/QA/job/E2E-PROD/jo
                    'https://jenkins2.app.gittigidiyor.net/job/QA/job/E2E-PROD/job/WEB/api/json']
 job_api_urls = []
 job_failure = []
-teams = ["bp", "bzg"]
+teams = []
 headers = {'Authorization': 'Basic bXlhbWFuOjQyMThjMDRmNjJjZWFhMzAwYmVlMzg2YjBhZmRjMjZl'}
 
 while True:
     try:
         # hc_07 = serial.Serial('/dev/tty.HC-05-SPPDev', 9600)
-        hc_06 = serial.Serial('/dev/tty.HC-06-SPPDev-1', 9600)
-        dota = serial.Serial('/dev/tty.HC-06-SPPDev', 9600)
+        hc_06 = serial.Serial('/dev/tty.HC-06-SPPDev', 9600)
+        dota_test_fail = serial.Serial('/dev/tty.HC-06-SPPDev-1', 9600)
         break
     except Exception:
         print()
@@ -60,16 +60,8 @@ def job_results(job_api_urls, job_failure):
 def send_message(job_failure):
     team_name = job_failure[0]
     print(team_name)
-    #print(team_name)
-    if team_name[0] == teams[0]:
-        # hc_07.write(b'6')
-        time.sleep(1.1)
-    if team_name[0] == teams[1]:
-        hc_06.write(b'6')
-        time.sleep(1.1)
-    else:
-        dota.write(b'6')
-        time.sleep(1.1)
+    dota_test_fail.write(b'6')
+    time.sleep(1.1)
     del job_failure[0]
     if len(job_failure) == 0:
         return
