@@ -1,6 +1,4 @@
 # RedAlert-eBay.sh
-#9bQeZz2socxJ2aowMCtJ
-
 import requests
 # import simplejson as json
 import serial
