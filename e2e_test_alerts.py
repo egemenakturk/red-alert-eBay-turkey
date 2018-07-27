@@ -15,8 +15,8 @@ headers = {'Authorization': 'Basic bXlhbWFuOjQyMThjMDRmNjJjZWFhMzAwYmVlMzg2YjBhZ
 while True:
     try:
         # hc_07 = serial.Serial('/dev/tty.HC-05-SPPDev', 9600)
-        #merge_requests_alert = serial.Serial('/dev/tty.HC-06-SPPDev', 9600)
-        dota_test_fail_alert = serial.Serial('/dev/tty.HC-06-SPPDev-1', 9600)
+        #merge_requests_alert = serial.Serial('/dev/tty.HC-06-SPPDev-1', 9600)
+        dota_test_fail_alert = serial.Serial('/dev/tty.HC-06-SPPDev', 9600)
         break
     except Exception:
         print()
@@ -60,7 +60,7 @@ def job_results(job_api_urls, job_failure):
 def send_message(job_failure):
     team_name = job_failure[0]
     print(team_name)
-    dota_test_fail.write(b'6')
+    dota_test_fail_alert.write(b'6')
     time.sleep(1.1)
     del job_failure[0]
     if len(job_failure) == 0:
