@@ -1,4 +1,4 @@
-# RedAlert-eBay
+# RedAlert-eBay.sh
 
 import requests
 # import simplejson as json
@@ -15,8 +15,8 @@ headers = {'Authorization': 'Basic bXlhbWFuOjQyMThjMDRmNjJjZWFhMzAwYmVlMzg2YjBhZ
 while True:
     try:
         # hc_07 = serial.Serial('/dev/tty.HC-05-SPPDev', 9600)
-        hc_06 = serial.Serial('/dev/tty.HC-06-SPPDev', 9600)
-        dota_test_fail = serial.Serial('/dev/tty.HC-06-SPPDev-1', 9600)
+        #merge_requests_alert = serial.Serial('/dev/tty.HC-06-SPPDev', 9600)
+        dota_test_fail_alert = serial.Serial('/dev/tty.HC-06-SPPDev-1', 9600)
         break
     except Exception:
         print()
