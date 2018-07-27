@@ -2,7 +2,6 @@
 import requests
 # import simplejson as json
 import serial
-import time
 
 while True:
     try:
