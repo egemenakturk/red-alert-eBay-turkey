@@ -45,7 +45,6 @@ def select_roots(folder_api_urls, job_api_urls, job_failure):
     else:
         select_roots(folder_api_urls, job_api_urls, job_failure)
 
-
 def job_results(job_api_urls, job_failure):
     while len(job_api_urls) != 0:
         data = requests.get(job_api_urls[0], headers=headers).json()
