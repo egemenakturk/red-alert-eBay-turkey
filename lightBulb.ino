@@ -28,9 +28,6 @@ void loop() {
   }
   
 }
-
-
-
 void blinkLED(int input){
   if(input==6){ // green
     digitalWrite(6,LOW);
