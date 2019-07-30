@@ -12,9 +12,9 @@ void setup() {
 
 void loop() {
   // listen for the data
-  if(digitalRead(11)!=fiveSix){
-    digitalWrite(6,HIGH); 
-    fiveSix=digitalRead(11); 
+  if(digitalRead(11)!=switchInput){
+    digitalWrite(6,LOW); 
+    switchInput=digitalRead(11); 
   }
   if ( Serial.available() > 0 ) {
     // read a numbers from serial port
@@ -29,8 +29,8 @@ void loop() {
   
 }
 void blinkLED(int input){
-  if(input==6){ // green
-    digitalWrite(6,LOW);
+  if(input==1){ // green
+    digitalWrite(6,HIGH);
   }  
   
   
